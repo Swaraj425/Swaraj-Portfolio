@@ -49,19 +49,13 @@ const Navbar = () => {
         { id: 4, text: "Contact", to: "contact" },
     ];
 
-    const handleNavigation = (to) => {
-        if (location.pathname !== "/") {
-            // Navigate to Home first, then scroll
-            window.location.href = `/#${to}`;
-        } else {
-            // If already on Home page, just scroll
-            document.getElementById(to)?.scrollIntoView({ behavior: "smooth" });
-        }
-    };
+    const filteredItems = location.pathname === '/projectdetail' ? items.filter(item => item.to === "/") : items.map(item => ({
+        ...item,
+        to: item.to === "/" ? item.to : `/#${item.to}`
+    }));
 
-    const filteredItems = location.pathname === '/projectdetail' ? items.filter(item => item.to === "/") : items;
+    console.log("Link : ", filteredItems);
 
-    
 
     return (
         <div
@@ -83,25 +77,24 @@ const Navbar = () => {
                     </RouterLink>
                 </div>
                 <div>
-                <ul className="hidden md:flex items-center space-x-6 list-none lg:text-lg md:text-base">
-                    {items.map((item) => (
-                        <li key={item.id}>
-                            {item.to === "/" ? (
-                                <RouterLink to="/" className="cursor-pointer">
-                                    {item.text}
-                                </RouterLink>
-                            ) : (
-                                <button 
-                                    onClick={() => handleNavigation(item.to)} 
-                                    className="cursor-pointer"
-                                >
-                                    {item.text}
-                                </button>
-                            )}
-                        </li>
-                    ))}
-                </ul>
-
+                    <ul className="hidden md:flex items-center space-x-6 list-none lg:text-lg md:text-base">
+                        {filteredItems.map((item) => (
+                            <li
+                                key={item.id}
+                                className="hover:scale-110  dark:hover:text-purple-500 transform transition-all duration-300 hover:underline cursor-pointer"
+                            >
+                                {item.to === "/" ? (
+                                    <RouterLink to={item.to}>
+                                        {item.text}
+                                    </RouterLink>
+                                ) : (
+                                    <RouterLink to={item.to}>
+                                        {item.text}
+                                    </RouterLink>
+                                )}
+                            </li>
+                        ))}
+                    </ul>
                 </div>
 
                 {/* Dark/Light Mode Toggle and CV Download Button */}
@@ -152,7 +145,7 @@ const Navbar = () => {
                         {menu && (
                             <div className='flex flex-col justify-center items-center'>
                                 <ul className='space-y-6 text-lg bg-slate-100 text-black dark:bg-black dark:text-white'>
-                                    {items.map((item) => (
+                                    {filteredItems.map((item) => (
                                         <li key={item.id} className='py-2 mt-5 hover:scale-110 text-lg  hover:underline transform transition-all duration-300'>
                                             <ScrollLink to={item.to} onClick={() => setMenu((prev) => !prev)} smooth={true} duration={500} offset={-70}>
                                                 {item.text}
