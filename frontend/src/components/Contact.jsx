@@ -179,7 +179,7 @@ const Contact = () => {
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                             placeholder='Message'
-                            className='bg-white border-zinc-950 placeholder:text-zinc-500 border dark:border-purple-500 dark:bg-zinc-800 p-4 rounded-lg w-full outline-none'>
+                            className='bg-white border-zinc-950 placeholder:text-zinc-500 border dark:border-white dark:bg-zinc-800 p-4 rounded-lg w-full outline-none'>
                         </textarea>
                         <button
                             type='submit'
