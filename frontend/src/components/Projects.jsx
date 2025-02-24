@@ -78,7 +78,7 @@ const Projects = () => {
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8'>
                     {projects.map((project) => {
                         const { ref, inView } = useInView({
-                            triggerOnce: false,
+                            triggerOnce: true,
                             threshold: 0.1,
                             rootMargin: '0px 0px -20% 0px',
                         });
