@@ -9,6 +9,7 @@ import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 import Footer from './Footer';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import url from '../App'
 
 const Contact = () => {
 
@@ -22,7 +23,7 @@ const Contact = () => {
         e.preventDefault();
 
         try {
-            const { data } = await axios.post(`http://localhost:5000/api/contact`, {
+            const { data } = await axios.post(`${url}/api/contact`, {
                 firstName,
                 lastName,
                 email,

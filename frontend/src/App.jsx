@@ -11,6 +11,8 @@ import Contact from './components/Contact'
 import Skills from './components/Skills'
 import ProjectDetails from './components/ProjectDetails'
 
+export const url = 'https://backend-portfolio-jm7fuprin-swaraj-phalkes-projects.vercel.app'
+
 const App = () => {
   return (
     <Router>
