@@ -7,7 +7,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
 import CV from "../assets/Resume.pdf"
 import { Link as ScrollLink } from 'react-scroll';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { IoIosSunny } from "react-icons/io";
 import { useLocation } from 'react-router-dom';
 
@@ -53,6 +53,20 @@ const Navbar = () => {
 
     
 
+    const navigate = useNavigate();
+
+    const handleNavigation = (to) => {
+        if (location.pathname !== "/") {
+            navigate("/");
+            setTimeout(() => {
+                document.getElementById(to)?.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+        } else {
+            document.getElementById(to)?.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+
     return (
         <div
             className={`transition-all duration-300 ${theme === 'dark' ? 'bg-black text-white' : 'bg-slate-100 text-black'
@@ -74,21 +88,11 @@ const Navbar = () => {
                 </div>
                 <div>
                     <ul className="hidden md:flex items-center space-x-6 list-none lg:text-lg md:text-base">
-                        {filteredItems.map((item) => (
-                            <li
-                                key={item.id}
-                                className="hover:scale-110  dark:hover:text-purple-500 transform transition-all duration-300 hover:underline cursor-pointer"
-                            >
-                                {item.to === "/" ? (
-                                    <RouterLink to={item.to}>
-                                        {item.text}
-                                    </RouterLink>
-                                ) : (
-                                    <ScrollLink to={item.to} smooth={true} duration={500} offset={-70}>
-                                        {item.text}
-                                    </ScrollLink>
-                                )}
-                            </li>
+                        {items.map((item) => (
+                           <li key={item.id} onClick={() => handleNavigation(item.to)} className="cursor-pointer">
+                           {item.text}
+                       </li>
+                       
                         ))}
                     </ul>
                 </div>
