@@ -10,8 +10,8 @@ const app = express();
 // Middleware
 app.use(cors(
   {
-    origin: [""],
-    methods: ["GET", "POST"],
+    origin: ["https://swaraj-portfolio-frontend.vercel.app"],
+    methods: ["GET", "POST"], 
     credentials: true
   }
 ));

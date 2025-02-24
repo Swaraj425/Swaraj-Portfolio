@@ -29,6 +29,6 @@ The skill section provides a detailed overview of my technical skills. It includ
 1. **Toggle Dark/Light Mode**: Click the switch at the top right corner to change the theme.
 2. **Navigate Sections**: Use the navigation bar at the top to move between different sections of the website.
 3. **View Projects**: Click on any project in the Projects section to see more details and access links to live demos or repositories.
-4. **Contact Me**: Fill out the form in the Contact section to send me a message directly to mail   .
+4. **Contact Me**: Fill out the form in the Contact section to send me a message directly.
 
 Thank you for visiting my portfolio website!

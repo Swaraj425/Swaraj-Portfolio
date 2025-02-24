@@ -3,6 +3,7 @@
 const express = require("express");
 const router = express.Router();
 const nodemailer = require("nodemailer");
+const Contact = require("../models/Contact");
 
 router.post("/", async (req, res) => {
     const { firstName, lastName, email, message } = req.body;
