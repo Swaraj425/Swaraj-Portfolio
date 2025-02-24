@@ -42,7 +42,7 @@ const About = () => {
                             animate={inView ? { opacity: 1, x: 0 } : {}}
                             transition={{ delay: 0.7, duration: 0.9 }}
                             className='md:w-4/6  dark:text-gray-200  text-black md:px-0 text-[1.1rem] sm:text-lg md:text-2xl text-justify px-1 md:text-start'>
-                            Hi, I’m Swaraj Phalke, a passionate full stack developer  and also have basic knowledge of Android Development. I like to create dynamic and user-friendly applications that provide great user experiences.When I’m not coding, I enjoy learning new programming languages and diving into various tech trends.
+                            Hi, I’m Swaraj Phalke, a passionate full stack developer  and also have basic knowledge of Android Development. I like to create dynamic and user-friendly applications that provide great user experiences. I enjoy learning new programming languages and diving into various tech trends.
                         </motion.p>
                     </div>
 
