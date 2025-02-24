@@ -42,7 +42,7 @@ const Projects = () => {
             domain: "Web Development",
             image: Music,
             desc: "The Music Player is a full-featured web application that enables users to explore, upload, and manage their own music collections. With interactive features like album and playlist creation, volume control, and seamless playback, it provides a dynamic and user-friendly experience.",
-            link: "lorem102"
+            link: ""
         },
         {
             id: "4_instagram_clone",
@@ -104,6 +104,9 @@ const Projects = () => {
                                         </p>
                                         <p className='text-black dark:text-slate-200 line-clamp-6'>
                                             {project.desc}
+                                        </p>
+                                        <p className='text-black dark:text-slate-200 line-clamp-6'>
+                                            Check It Out : <b className='text-blue-500'>{project.link}</b>
                                         </p>
                                     </div>
                                     <Link to={`/project/${project.id}`} className="relative border-2 border-black text- hover:text-white dark:border-white dark:text-white dark:hover:text-black px-4 py-2 rounded-lg overflow-hidden group">
