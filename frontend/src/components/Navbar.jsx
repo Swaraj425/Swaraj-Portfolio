@@ -51,6 +51,9 @@ const Navbar = () => {
 
     const filteredItems = location.pathname === '/projectdetail' ? items.filter(item => item.to === "/") : items;
 
+    console.log("Link : ", filteredItems);
+    
+
     return (
         <div
             className={`transition-all duration-300 ${theme === 'dark' ? 'bg-black text-white' : 'bg-slate-100 text-black'
