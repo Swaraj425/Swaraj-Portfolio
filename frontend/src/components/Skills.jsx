@@ -115,24 +115,24 @@ const Skills = () => {
             Icon : python,
             href: "https://www.oracle.com/java/"
         },
-        {
-            id: 2,
-            Name : "Java",
-            Icon : java,
-            href: "https://www.oracle.com/java/"
-        },
-        {
-            id: 3,
-            Name : "C",
-            Icon : c,
-            href: "https://www.geeksforgeeks.org/c-programming-language/"
-        },
-        {
-            id: 4,
-            Name : "C++",
-            Icon : cpp,
-            href: "https://isocpp.org/"
-        },
+        // {
+        //     id: 2,
+        //     Name : "Java",
+        //     Icon : java,
+        //     href: "https://www.oracle.com/java/"
+        // },
+        // {
+        //     id: 3,
+        //     Name : "C",
+        //     Icon : c,
+        //     href: "https://www.geeksforgeeks.org/c-programming-language/"
+        // },
+        // {
+        //     id: 4,
+        //     Name : "C++",
+        //     Icon : cpp,
+        //     href: "https://isocpp.org/"
+        // },
         {
             id: 5,
             Name : "HTML",

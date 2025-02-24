@@ -21,11 +21,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<>
             <Hero />
-            <About />
-            <Projects />
-            <Skills />
-            <Contact />
           </>} />
+          <Route path="/" element={<About />}  />
+          <Route path="/" element={<Projects />}  />
+          <Route path="/" element={<Skills />}  />
+          <Route path="/" element={<Contact />}  />
           <Route path="/project/:id" element={<ProjectDetails />} />
         </Routes>
       </div>
