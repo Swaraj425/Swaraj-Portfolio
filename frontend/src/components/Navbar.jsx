@@ -49,13 +49,9 @@ const Navbar = () => {
         { id: 4, text: "Contact", to: "contact" },
     ];
 
-    const filteredItems = location.pathname === '/projectdetail' ? items.filter(item => item.to === "/") : items.map(item => ({
-        ...item,
-        to: item.to === "/" ? item.to : `/#${item.to}`
-    }));
+    const filteredItems = location.pathname === '/projectdetail' ? items.filter(item => item.to === "/") : items;
 
-    console.log("Link : ", filteredItems);
-
+    
 
     return (
         <div
@@ -88,9 +84,9 @@ const Navbar = () => {
                                         {item.text}
                                     </RouterLink>
                                 ) : (
-                                    <RouterLink to={item.to}>
+                                    <ScrollLink to={item.to} smooth={true} duration={500} offset={-70}>
                                         {item.text}
-                                    </RouterLink>
+                                    </ScrollLink>
                                 )}
                             </li>
                         ))}
