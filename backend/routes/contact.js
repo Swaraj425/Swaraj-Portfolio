@@ -3,6 +3,7 @@
 const express = require("express");
 const router = express.Router();
 const nodemailer = require("nodemailer");
+const Contact = require("../models/Contact")
 
 router.post("/", async (req, res) => {
     const { firstName, lastName, email, message } = req.body;
@@ -14,7 +15,7 @@ router.post("/", async (req, res) => {
     try {
 
         // Save to MongoDB
-        const newContact = new Contact({ firstName, lastName, email, message });
+        const newContact = new Contact({ firstName, lastName, email, message })
         await newContact.save();
         
         // Create a transporter
