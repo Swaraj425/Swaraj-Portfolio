@@ -23,7 +23,7 @@ const Contact = () => {
         e.preventDefault();
 
         try {
-            const { data } = await axios.post(`${url}/api/contact`, {
+            const { data } = await axios.post(`https://swaraj-portfolio-backend.vercel.app/api/contact`, {
                 firstName,
                 lastName,
                 email,
