@@ -105,9 +105,9 @@ const Projects = () => {
                                         <p className='text-black dark:text-slate-200 line-clamp-6'>
                                             {project.desc}
                                         </p>
-                                        <p className='text-black dark:text-slate-200 line-clamp-6 my-4'>
+                                        {/* <p className='text-black dark:text-slate-200 line-clamp-6 my-4'>
                                             Check It Out : <a href={project.link} target='blank'><b className='text-blue-500'>{project.link}</b></a>
-                                        </p>
+                                        </p> */}
                                     </div>
                                     <Link to={`/project/${project.id}`} className="relative border-2 border-black text- hover:text-white dark:border-white dark:text-white dark:hover:text-black px-4 py-2 rounded-lg overflow-hidden group">
                                         <span className="absolute inset-0 bg-gradient-to-r from-black  to-black dark:bg-gradient-to-r dark:from-white  dark:to-white transform scale-x-0 origin-right transition-transform duration-500 ease-out group-hover:scale-x-100 group-hover:origin-left"></span>
