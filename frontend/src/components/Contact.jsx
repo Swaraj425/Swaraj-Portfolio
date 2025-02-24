@@ -149,14 +149,14 @@ const Contact = () => {
                                 onChange={(e) => setFirstName(e.target.value)}
                                 type="text"
                                 placeholder='First Name'
-                                className='bg-white border-zinc-950 placeholder:text-zinc-500 border dark:border-purple-500 dark:bg-zinc-800 p-4 rounded-lg w-full outline-none'
+                                className='bg-white border-zinc-950 placeholder:text-zinc-500 border dark:border-white dark:bg-zinc-800 p-4 rounded-lg w-full outline-none'
                             />
                             <input
                                 value={lastName}
                                 onChange={(e) => setLastName(e.target.value)}
                                 type="text"
                                 placeholder='Last Name'
-                                className='bg-white border-zinc-950 placeholder:text-zinc-500 border dark:border-purple-500 dark:bg-zinc-800 p-4 rounded-lg w-full outline-none'
+                                className='bg-white border-zinc-950 placeholder:text-zinc-500 border dark:border-white dark:bg-zinc-800 p-4 rounded-lg w-full outline-none'
                             />
                         </div>
                         <div className='grid grid-cols-1 sm:grid-cols-1 gap-4'>
@@ -165,14 +165,14 @@ const Contact = () => {
                                 onChange={(e) => setEmail(e.target.value)}
                                 type="email"
                                 placeholder='Your Email'
-                                className='bg-white border-zinc-950 placeholder:text-zinc-500 border dark:border-purple-500 dark:bg-zinc-800 p-4 rounded-lg w-full outline-none'
+                                className='bg-white border-zinc-950 placeholder:text-zinc-500 border dark:border-white dark:bg-zinc-800 p-4 rounded-lg w-full outline-none'
                             />
                             {/* <input
                                 value={number}
                                 onChange={(e) => setNumber(e.target.value)}
                                 type="number"
                                 placeholder='Phone Number'
-                                className='bg-white border-zinc-950 placeholder:text-zinc-500 border dark:border-purple-500 dark:bg-zinc-800 p-4 rounded-lg w-full outline-none'
+                                className='bg-white border-zinc-950 placeholder:text-zinc-500 border dark:border-white dark:bg-zinc-800 p-4 rounded-lg w-full outline-none'
                             /> */}
                         </div>
                         <textarea
