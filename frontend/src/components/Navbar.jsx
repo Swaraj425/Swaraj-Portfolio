@@ -88,7 +88,7 @@ const Navbar = () => {
                 <div>
                     <ul className="hidden md:flex items-center space-x-6 list-none lg:text-lg md:text-base">
                         {items.map((item) => (
-                        <li key={item.id} onClick={() => handleNavigation(item.to)} className="cursor-pointer hover:text-base hover:transition-all hover:duration-200">
+                        <li key={item.id} onClick={() => handleNavigation(item.to)} className="cursor-pointer hover:underline hover:transition-all hover:duration-200">
                             {item.text}
                         </li>
                         ))}
@@ -144,7 +144,7 @@ const Navbar = () => {
                             <div className='flex flex-col justify-center items-center'>
                                 <ul className='space-y-6 text-lg bg-slate-100 text-black dark:bg-black dark:text-white'>
                                     {items.map((item) => (
-                                        <li key={item.id} onClick={() => handleNavigation(item.to)} className="cursor-pointer hover:text-base hover:transition-all hover:duration-200">
+                                        <li key={item.id} onClick={() => handleNavigation(item.to)} className="cursor-pointer hover:underline hover:transition-all hover:duration-200">
                                         {item.text}
                                     </li>
                                     ))}
