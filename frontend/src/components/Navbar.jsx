@@ -71,8 +71,7 @@ const Navbar = () => {
         <div
             className={`transition-all duration-300 ${theme === 'dark' ? 'bg-black text-white' : 'bg-slate-100 text-black'
                 }`}
-        // Added transition for smooth switching between light/dark mode
-        >
+                >
             {/* Navbar */}
             <motion.div
                 initial={{ opacity: 0, y: -100 }}
@@ -89,10 +88,9 @@ const Navbar = () => {
                 <div>
                     <ul className="hidden md:flex items-center space-x-6 list-none lg:text-lg md:text-base">
                         {items.map((item) => (
-                           <li key={item.id} onClick={() => handleNavigation(item.to)} className="cursor-pointer">
-                           {item.text}
-                       </li>
-                       
+                        <li key={item.id} onClick={() => handleNavigation(item.to)} className="cursor-pointer hover:text-base hover:transition-all hover:duration-200">
+                            {item.text}
+                        </li>
                         ))}
                     </ul>
                 </div>
@@ -145,12 +143,10 @@ const Navbar = () => {
                         {menu && (
                             <div className='flex flex-col justify-center items-center'>
                                 <ul className='space-y-6 text-lg bg-slate-100 text-black dark:bg-black dark:text-white'>
-                                    {filteredItems.map((item) => (
-                                        <li key={item.id} className='py-2 mt-5 hover:scale-110 text-lg  hover:underline transform transition-all duration-300'>
-                                            <ScrollLink to={item.to} onClick={() => setMenu((prev) => !prev)} smooth={true} duration={500} offset={-70}>
-                                                {item.text}
-                                            </ScrollLink>
-                                        </li>
+                                    {items.map((item) => (
+                                        <li key={item.id} onClick={() => handleNavigation(item.to)} className="cursor-pointer hover:text-base hover:transition-all hover:duration-200">
+                                        {item.text}
+                                    </li>
                                     ))}
                                 </ul>
 
