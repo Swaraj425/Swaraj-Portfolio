@@ -19,12 +19,13 @@ const About = () => {
         <>        
         
             <motion.div 
-             ref={ref}
-             initial={{ opacity: 0, x: 100 }}
-             animate={inView ? { opacity: 1, x: 0 } : {}}
-             transition={{ delay: 0.7, duration: 0.9 }}
             className='flex justify-center items-center dark:text-white pt-24 text-black bg-slate-100 dark:bg-black  md:h-[70rem]' id='about'>
-                <div className='container  mx-auto px-4 text-center p-10'>
+                <motion.div 
+                 ref={ref}
+                 initial={{ opacity: 0, x: 100 }}
+                 animate={inView ? { opacity: 1, x: 0 } : {}}
+                 transition={{ delay: 0.7, duration: 0.9 }}
+                className='container  mx-auto px-4 text-center p-10'>
                     <motion.h2 className='text-3xl md:text-4xl font-bold mb-8 underline'>
                         About Me
                     </motion.h2>
@@ -68,7 +69,7 @@ const About = () => {
                                 className='text-sm sm:text-[1rem] text-zinc-900 dark:text-gray-300'>Project I have Made</motion.p>
                         </motion.div>
                     </div>
-                </div>
+                </motion.div>
 
             </motion.div>
         </>
