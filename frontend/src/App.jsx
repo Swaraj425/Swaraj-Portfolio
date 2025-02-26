@@ -12,7 +12,7 @@ import Skills from './components/Skills'
 import ProjectDetails from './components/ProjectDetails'
 import Footer from './components/Footer'
 
-export const url = 'https://swaraj-portfolio-backend.vercel.app '
+export const url = 'https://swaraj-portfolio-eta.vercel.app'
 
 const App = () => {
   return (
