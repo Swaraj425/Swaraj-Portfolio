@@ -18,7 +18,7 @@ const About = () => {
     return (
         <>        
         
-            <div className='dark:text-white text-black bg-slate-100 dark:bg-black  md:h-[60rem]' id='about'>
+            <div className='flex justify-center items-center dark:text-white pt-24 text-black bg-slate-100 dark:bg-black  md:h-[70rem]' id='about'>
                 <div className='container  mx-auto px-4 text-center p-10'>
                     <motion.h2
                         ref={ref}

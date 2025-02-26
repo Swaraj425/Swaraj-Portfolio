@@ -56,14 +56,14 @@ const Projects = () => {
     ];
 
     return (
-        <div className='py-5 md:h-[60rem] bg-slate-100 dark:bg-black' id='projects'>
+        <div className='flex justify-center items-center py-5 md:h-[70rem] pt-24 bg-slate-100 dark:bg-black' id='projects'>
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <motion.h1
                     ref={titleRef.ref}
                     initial={{ opacity: 0, y: 100 }}
                     animate={titleRef.inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 0.2, duration: 0.5 }}
-                    className='text-3xl text-black dark:text-white underline font-bold text-center mb-5'>
+                    className='text-3xl text-black dark:text-white underline font-bold text-center mb-5 '>
                     Projects
                 </motion.h1>
                 <motion.p

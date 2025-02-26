@@ -17,7 +17,7 @@ const Footer = () => {
                     initial={{opacity: 0}}
                     animate={inView ? {opacity: 1} : {} }
                     transition={{delay: 1, duration: 0.3}}
-                    className='mt-[6rem] h-[1rem]  md:h-[5rem] flex justify-between items-center p-8 text-black dark:text-white border-t-2 border-black dark:border-white'>
+                    className='bg-slate-100 text-black dark:bg-black dark:text-white flex justify-between items-center p-8 border-t-2 border-black dark:border-white'>
                     <p className='text-xs sm:text-lg font-bold'> Swaraj Phalke</p>
                     {/* <p className='text-xs sm:text-lg'> &copy; All Rights Reserved </p> */}
                     <div className='flex justify-center items-center space-x-4 text-black dark:text-white mb-1'>

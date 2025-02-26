@@ -68,7 +68,7 @@ const Contact = () => {
     })
 
     return (
-        <div className='md:h-[50rem] bg-slate-100 dark:bg-black py-28' id='contact'>
+        <div className='bg-slate-100 dark:bg-black py-28 ' id='contact'>
             <div>
                 <div className='max-w-7xl px-4 sm:px-6 lg:px-8 text-center py-12 mx-auto'>
                     <motion.h2
@@ -191,7 +191,6 @@ const Contact = () => {
                 </div>
 
                 {/* Footer */}
-                <Footer />
                 <ToastContainer />
             </div>
         </div>

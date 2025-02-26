@@ -13,8 +13,8 @@ const Hero = () => {
 
         <>
 
-        <div className='text-black bg-slate-100 dark:bg-black dark:text-white py-16 h-[50rem] sm:h-[60rem]' id='hero'>
-
+        <div className='text-black bg-slate-100 dark:bg-black dark:text-white py-16 min-h-screen' id='hero'>
+    
             <motion.img
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}

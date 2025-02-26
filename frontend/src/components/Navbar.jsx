@@ -15,6 +15,8 @@ const Navbar = () => {
     const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
     const location = useLocation();
 
+    const [activeTab, setActiveTab] = useState("")
+
     useEffect(() => {
         // Apply theme to the root element (body or html)
         document.documentElement.className = theme;
@@ -41,7 +43,7 @@ const Navbar = () => {
     const [menu, setMenu] = useState(false);
 
     const items = [
-        { text: "Home", to: "/" },
+        { id: 0, text: "Home", to: "hero" },
         { id: 1, text: "About", to: "about" },
         { id: 2, text: "Projects", to: "projects" },
         // { id: 3, text: "Services", to: "services" },
@@ -51,11 +53,12 @@ const Navbar = () => {
 
     const filteredItems = location.pathname === '/projectdetail' ? items.filter(item => item.to === "/") : items;
 
-    
+
 
     const navigate = useNavigate();
 
     const handleNavigation = (to) => {
+        setActiveTab(to);
         if (location.pathname !== "/") {
             navigate("/");
             setTimeout(() => {
@@ -66,19 +69,47 @@ const Navbar = () => {
         }
     };
 
+    // Observe which section is in view
+    useEffect(() => {
+        const observerOptions = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.6, // Adjust this value to detect when 60% of the section is visible
+        };
+
+        const observerCallback = (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActiveTab(entry.target.id);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        items.forEach((item) => {
+            const section = document.getElementById(item.to);
+            if (section) {
+                observer.observe(section);
+            }
+        });
+
+        return () => {
+            observer.disconnect();
+        };
+    }, [location.pathname]);
 
     return (
         <div
-            className={`transition-all duration-300 ${theme === 'dark' ? 'bg-black text-white' : 'bg-slate-100 text-black'
+            className={`transition-all duration-300 ${theme === 'dark' ? 'bg-white text-white' : 'bg-slate-100 text-black '
                 }`}
-                >
+        >
             {/* Navbar */}
             <motion.div
                 initial={{ opacity: 0, y: -100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="fixed z-[9999] bg-slate-100 border-b-2 border-black text-black dark:bg-black dark:text-white md:w-full mx-auto hidden md:flex justify-between items-center p-5 px-6"
-            >
+                className="fixed z-[9999] bg-slate-100 border-b-2 border-black text-black dark:bg-black dark:text-white md:w-full mx-auto hidden md:flex justify-between items-center p-5 px-6">
                 <div className="text-xl lg:text-2xl font-bold flex items-center gap-1">
                     <RouterLink to="/">
                         <span className="dark:text-white text-black">Swaraj</span>
@@ -88,9 +119,9 @@ const Navbar = () => {
                 <div>
                     <ul className="hidden md:flex items-center space-x-6 list-none lg:text-lg md:text-base">
                         {items.map((item) => (
-                        <li key={item.id} onClick={() => handleNavigation(item.to)} className="cursor-pointer hover:underline hover:transition-all hover:duration-200">
-                            {item.text}
-                        </li>
+                            <li key={item.id} onClick={() => handleNavigation(item.to)} className={`cursor-pointer ${activeTab === item.to ? 'bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded-xl transition-all duration-500' : ''}`}>
+                                {item.text}
+                            </li>
                         ))}
                     </ul>
                 </div>
@@ -145,8 +176,8 @@ const Navbar = () => {
                                 <ul className='space-y-6 text-lg bg-slate-100 text-black dark:bg-black dark:text-white'>
                                     {items.map((item) => (
                                         <li key={item.id} onClick={() => handleNavigation(item.to)} className="cursor-pointer hover:underline hover:transition-all hover:duration-200">
-                                        {item.text}
-                                    </li>
+                                            {item.text}
+                                        </li>
                                     ))}
                                 </ul>
 

@@ -204,7 +204,7 @@ const Skills = () => {
 
     return (
         <div id='skills'>
-            <div className='w-full text-black dark:text-white bg-slate-100 dark:bg-black lg:py-28 md:h-[60rem]' id='services'>
+            <div className='flex justify-center items-center w-full text-black dark:text-white bg-slate-100 dark:bg-black lg:py-28 md:h-[70rem]' id='services'>
                 <motion.div 
                 ref={ref}
                 initial={{opacity:0 , y:100}}

@@ -10,26 +10,30 @@ import Services from './components/Services'
 import Contact from './components/Contact'
 import Skills from './components/Skills'
 import ProjectDetails from './components/ProjectDetails'
+import Footer from './components/Footer'
 
-export const url = 'https://swaraj-portfolio-backend.vercel.app'
+export const url = 'https://swaraj-portfolio-backend.vercel.app '
 
 const App = () => {
   return (
-    <Router>
-      <div className='overflow-x-hidden bg-white dark:bg-black'>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<>
-            <Hero />
-            <About />
-            <Projects />
-            <Skills />
-            <Contact />
-          </>} />
-          <Route path="/project/:id" element={<ProjectDetails />} />
-        </Routes>
-      </div>
-    </Router>
+      <>
+        <Router>
+          <div className='overflow-x-hidden'>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<>
+                <Hero />
+                <About />
+                <Projects />
+                <Skills />
+                <Contact />
+              </>} />
+              <Route path="/project/:id" element={<ProjectDetails />} />
+            </Routes>
+            <Footer />
+          </div>
+        </Router>
+      </>
   )
 }
 
