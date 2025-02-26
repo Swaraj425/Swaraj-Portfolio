@@ -11,7 +11,7 @@ const About = () => {
 
     const { ref, inView } = useInView({
         triggerOnce: true,
-        threahold: 0.2,
+        threahold: 0.1,
         
     })
 

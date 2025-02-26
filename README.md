@@ -24,7 +24,7 @@ The skill section provides a detailed overview of my technical skills. It includ
 - **Frameworks and Libraries**: Technologies I have experience with.
 - **Tools and Platforms**: Software and platforms I use regularly.
 
-## How to Use
+## How to Use   
 
 1. **Toggle Dark/Light Mode**: Click the switch at the top right corner to change the theme.
 2. **Navigate Sections**: Use the navigation bar at the top to move between different sections of the website.
