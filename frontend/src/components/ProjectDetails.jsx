@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { FaRegArrowAltCircleLeft, FaRegArrowAltCircleRight } from "react-icons/fa";
-
 import { instagramImg, projectDetails } from '../assets/Projects/projectDetails';
 
 const ProjectDetails = () => {
@@ -30,7 +29,6 @@ const ProjectDetails = () => {
     return (
         <div className='w-full bg-slate-100 text-black dark:text-white dark:bg-black' id='project-details'>
             <div className="w-full p-4 md:mt-20">
-                {/* <h1 className="text-3xl font-semibold text-center mb-8">Project Details</h1> */}
                 <div className="shadow-lg rounded-lg p-6 mb-6">
                     <h2 className="text-2xl font-bold text-gray-800 dark:text-white"><span>{project.id}.</span> {project.title}</h2>
                     <p className="text-lg text-black dark:text-slate-300 mt-2 mb-4">{project.domain}</p>
