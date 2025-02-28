@@ -33,6 +33,6 @@ The skill section provides a detailed overview of my technical skills. It includ
 
 ### Visit Portfolio 
 
-- **swaraj-portfolio-frontend.vercel.app/
+- https://swaraj-portfolio-frontend.vercel.app/
 
 Thank you for visiting my portfolio website!
