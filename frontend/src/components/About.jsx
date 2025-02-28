@@ -26,7 +26,7 @@ const About = () => {
                         animate={inView ? { opacity: 1, y: 0 } : {}}
                         transition={{ delay: 0.3, duration: 0.5 }}
                         className='text-3xl md:text-4xl font-bold mb-8 underline'>About Me</motion.h2>
-                    {/* <p className='mb-12 text-gray-400 text-center'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores aut error sunt rerum consequuntur! Consectetur voluptate rerum eveniet sed sunt!</p> */}
+                
                     <div className='flex flex-col md:flex-row justify-center items-center w-10/14 mx-auto'>
                         <motion.div
                             ref={ref}

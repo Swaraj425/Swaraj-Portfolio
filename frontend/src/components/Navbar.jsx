@@ -18,7 +18,6 @@ const Navbar = () => {
     const [activeTab, setActiveTab] = useState("")
 
     useEffect(() => {
-        // Apply theme to the root element (body or html)
         document.documentElement.className = theme;
         localStorage.setItem('theme', theme);
     }, [theme]);
@@ -46,7 +45,6 @@ const Navbar = () => {
         { id: 0, text: "Home", to: "hero" },
         { id: 1, text: "About", to: "about" },
         { id: 2, text: "Projects", to: "projects" },
-        // { id: 3, text: "Services", to: "services" },
         { id: 3, text: "Skills", to: "skills" },
         { id: 4, text: "Contact", to: "contact" },
     ];
@@ -74,7 +72,7 @@ const Navbar = () => {
         const observerOptions = {
             root: null,
             rootMargin: "0px",
-            threshold: 0.6, // Adjust this value to detect when 60% of the section is visible
+            threshold: 0.2, 
         };
 
         const observerCallback = (entries) => {
@@ -101,9 +99,7 @@ const Navbar = () => {
 
     return (
         <div
-            className={`transition-all duration-300 ${theme === 'dark' ? 'bg-white text-white' : 'bg-slate-100 text-black '
-                }`}
-        >
+            className={`transition-all duration-300 ${theme === 'dark' ? 'bg-white text-white' : 'bg-slate-100 text-black '}`}>
             {/* Navbar */}
             <motion.div
                 initial={{ opacity: 0, y: -100 }}
