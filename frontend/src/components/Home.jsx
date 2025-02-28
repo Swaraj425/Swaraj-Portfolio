@@ -9,11 +9,13 @@ import Contact from './Contact'
 const Home = () => {
     return (
         <>
+            
             <Hero />
             <About />
             <Projects />
             <Skills />
             <Contact />
+        
         </>
     )
 }
