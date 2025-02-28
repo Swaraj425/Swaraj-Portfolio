@@ -31,6 +31,8 @@ The skill section provides a detailed overview of my technical skills. It includ
 3. **View Projects**: Click on any project in the Projects section to see more details and access links to live demos or repositories.
 4. **Contact Me**: Fill out the form in the Contact section to send me a message directly.
 
-### You can visit Portfolio on the following Link : swaraj-portfolio-frontend.vercel.app/
+### Visit Portfolio 
+
+- **swaraj-portfolio-frontend.vercel.app/
 
 Thank you for visiting my portfolio website!
